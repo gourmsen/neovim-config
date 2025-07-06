@@ -6,6 +6,7 @@
 - `telescope`: Fuzzy finder with preview
 - `lazygit`: Loader for `lazygit` within Neovim
 - `treesitter`: Advanced syntax highlighting
+- `lspconfig`: Configurations for language servers
 
 ## Themes
 
