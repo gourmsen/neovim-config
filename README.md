@@ -10,6 +10,7 @@
 - `gitsigns`: Visual lines for Git changes
 - `autosession`: Manages sessions for the cwd
 - `tree`: File explorer
+- `copilot`: GitHub Copilot integration
 
 ## Themes
 
