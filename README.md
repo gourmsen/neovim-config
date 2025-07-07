@@ -8,6 +8,7 @@
 - `treesitter`: Advanced syntax highlighting
 - `lspconfig`: Configurations for language servers
 - `gitsigns`: Visual lines for Git changes
+- `autosession`: Manages sessions for the cwd
 
 ## Themes
 
