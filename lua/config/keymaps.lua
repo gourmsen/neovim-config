@@ -1,4 +1,7 @@
--- find files with Telescope
+-- telescope
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>f", builtin.find_files)
 vim.keymap.set("n", "<leader>b", builtin.buffers)
+
+-- tree
+vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>")
