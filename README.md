@@ -7,6 +7,7 @@
 - `lazygit`: Loader for `lazygit` within Neovim
 - `treesitter`: Advanced syntax highlighting
 - `lspconfig`: Configurations for language servers
+- `gitsigns`: Visual lines for Git changes
 
 ## Themes
 
