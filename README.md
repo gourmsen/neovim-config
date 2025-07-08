@@ -11,6 +11,7 @@
 - `autosession`: Manages sessions for the cwd
 - `tree`: File explorer
 - `copilot`: GitHub Copilot integration
+- `cmp`: Completion engine
 
 ## Themes
 
