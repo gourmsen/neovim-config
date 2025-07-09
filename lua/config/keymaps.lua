@@ -1,21 +1,27 @@
 -- overview
 --
 -- b: buffers
--- d: diagnostics
+-- d: definition
+-- e: errors
 -- f: files
 -- g: grep
 -- j: next hunk
 -- k: previous hunk
 -- p: prettier
+-- r: references
 -- s: stage hunk
 -- t: tree
 -- u: undo stage hunk
+
+-- lsp
+vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition)
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.references)
 
 -- telescope
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>f", builtin.find_files)
 vim.keymap.set("n", "<leader>b", builtin.buffers)
-vim.keymap.set("n", "<leader>d", builtin.diagnostics)
+vim.keymap.set("n", "<leader>e", builtin.diagnostics)
 vim.keymap.set("n", "<leader>g", builtin.live_grep)
 
 -- tree
