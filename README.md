@@ -6,7 +6,7 @@
 - `telescope`: Fuzzy finder with preview
 - `lazygit`: Loader for `lazygit` within Neovim
 - `treesitter`: Advanced syntax highlighting
-- `lspconfig`: Configurations for language servers
+- `mason`: Configurations for language servers
 - `gitsigns`: Visual lines for Git changes
 - `autosession`: Manages sessions for the cwd
 - `tree`: File explorer

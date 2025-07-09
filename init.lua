@@ -4,9 +4,6 @@ require("config.options")
 -- load plugin manager
 require("config.lazy")
 
--- load language servers
-require("config.lsp")
-
 -- load keymaps
 require("config.keymaps")
 
