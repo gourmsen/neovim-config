@@ -12,6 +12,7 @@
 - `tree`: File explorer
 - `copilot`: GitHub Copilot integration
 - `cmp`: Completion engine
+- `fidget`: UI for LSP diagnostics
 
 ## Themes
 
