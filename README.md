@@ -15,6 +15,7 @@
 
 ## Themes
 
+- `everforest`: Green, dimmed theme
 - `catppuccin`: Cozy, purple-colored theme
 
 ## Requirements
