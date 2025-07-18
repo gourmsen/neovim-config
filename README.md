@@ -13,6 +13,7 @@
 - `copilot`: GitHub Copilot integration
 - `cmp`: Completion engine
 - `fidget`: UI for LSP diagnostics
+- `lualine`: Status line with diagnostics
 
 ## Themes
 
