@@ -18,6 +18,7 @@ return {
                         ["<C-d>"] = actions.delete_buffer
                     },
                 },
+                path_display = { "truncate" },
             },
             pickers = {
                 buffers = {
