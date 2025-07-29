@@ -25,3 +25,7 @@
 - `lazygit`: Terminal UI for Git
 - `gcc / libstdc++`: C / C++ compiler for Treesitter
 - `ripgrep`: Fast search tool for Telescope
+
+## Optional
+
+- `delta`: Pager for side-by-side diffs
