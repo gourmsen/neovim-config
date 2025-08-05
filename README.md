@@ -3,6 +3,7 @@
 ## Plugins (with Lazy)
 
 - `autopairs`: Matches brackets automatically
+- `autotag`: Auto-closes tags with treesitter
 - `telescope`: Fuzzy finder with preview
 - `lazygit`: Loader for `lazygit` within Neovim
 - `treesitter`: Advanced syntax highlighting
