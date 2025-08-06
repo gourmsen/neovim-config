@@ -15,6 +15,7 @@
 - `cmp`: Completion engine
 - `fidget`: UI for LSP diagnostics
 - `lualine`: Status line with diagnostics
+- `treesj`: Code splitting and joining
 
 ## Themes
 

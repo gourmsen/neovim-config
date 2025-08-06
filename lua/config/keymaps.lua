@@ -7,6 +7,7 @@
 -- g: grep
 -- j: next hunk
 -- k: previous hunk
+-- m: split/join
 -- p: prettier
 -- r: references
 -- s: stage hunk
@@ -32,6 +33,9 @@ vim.keymap.set({ "n", "v" }, "<leader>s", ":Gitsigns stage_hunk<CR>")
 vim.keymap.set("n", "<leader>u", ":Gitsigns undo_stage_hunk<CR>")
 vim.keymap.set("n", "<leader>j", ":Gitsigns next_hunk<CR>")
 vim.keymap.set("n", "<leader>k", ":Gitsigns prev_hunk<CR>")
+
+-- treesj
+vim.keymap.set('n', '<leader>m', require('treesj').toggle)
 
 -- prettier
 vim.keymap.set("n", "<leader>p", function()
