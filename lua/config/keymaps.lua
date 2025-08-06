@@ -8,6 +8,7 @@
 -- j: next hunk
 -- k: previous hunk
 -- m: split/join
+-- o: aerial outline
 -- p: prettier
 -- r: references
 -- s: stage hunk
@@ -35,7 +36,10 @@ vim.keymap.set("n", "<leader>j", ":Gitsigns next_hunk<CR>")
 vim.keymap.set("n", "<leader>k", ":Gitsigns prev_hunk<CR>")
 
 -- treesj
-vim.keymap.set('n', '<leader>m', require('treesj').toggle)
+vim.keymap.set("n", "<leader>m", require("treesj").toggle)
+
+-- aerial
+vim.keymap.set("n", "<leader>o", "<cmd>AerialToggle!<CR>")
 
 -- prettier
 vim.keymap.set("n", "<leader>p", function()

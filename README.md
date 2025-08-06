@@ -16,6 +16,7 @@
 - `fidget`: UI for LSP diagnostics
 - `lualine`: Status line with diagnostics
 - `treesj`: Code splitting and joining
+- `aerial`: Code outline
 
 ## Themes
 
