@@ -17,6 +17,7 @@
 - `lualine`: Status line with diagnostics
 - `treesj`: Code splitting and joining
 - `aerial`: Code outline
+- `trouble`: Diagnostics and references viewer
 
 ## Themes
 

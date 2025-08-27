@@ -23,8 +23,10 @@ vim.keymap.set("n", "<leader>r", vim.lsp.buf.references)
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>f", builtin.find_files)
 vim.keymap.set("n", "<leader>b", builtin.buffers)
-vim.keymap.set("n", "<leader>e", builtin.diagnostics)
 vim.keymap.set("n", "<leader>g", builtin.live_grep)
+
+-- trouble
+vim.keymap.set("n", "<leader>e", "<cmd>Trouble diagnostics toggle<cr>")
 
 -- tree
 vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>")
