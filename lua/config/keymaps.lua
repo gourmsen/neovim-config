@@ -10,6 +10,7 @@
 -- m: split/join
 -- o: aerial outline
 -- p: prettier
+-- q: quick preview
 -- r: references
 -- s: stage hunk
 -- t: tree
@@ -48,4 +49,22 @@ vim.keymap.set("n", "<leader>p", function()
     local pos = vim.api.nvim_win_get_cursor(0)
     vim.cmd("silent %!npx prettier --stdin-filepath %")
     pcall(vim.api.nvim_win_set_cursor, 0, pos)
+end)
+
+-- preview
+local function has_preview()
+    local wins = vim.tbl_filter(function(win)
+        local config = vim.api.nvim_win_get_config(win)
+        return config.relative ~= ""
+    end, vim.api.nvim_list_wins())
+    return #wins > 0
+end
+
+local goto_preview = require("goto-preview")
+vim.keymap.set("n", "<leader>q", function()
+    if has_preview() then
+        goto_preview.close_all_win()
+    else
+        goto_preview.goto_preview_definition()
+    end
 end)

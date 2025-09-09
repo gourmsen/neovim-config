@@ -19,6 +19,7 @@
 - `aerial`: Code outline
 - `trouble`: Diagnostics and references viewer
 - `indent`: Indentation guides
+- `preview`: Function preview window
 
 ## Themes
 
