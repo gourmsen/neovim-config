@@ -1,6 +1,7 @@
 -- overview
 --
 -- b: buffers
+-- c: hunk changes
 -- d: definition
 -- e: errors
 -- f: files
@@ -33,6 +34,7 @@ vim.keymap.set("n", "<leader>e", "<cmd>Trouble diagnostics toggle<cr>")
 vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>")
 
 -- gitsigns
+vim.keymap.set("n", "<leader>c", ":Gitsigns preview_hunk_inline<CR>")
 vim.keymap.set({ "n", "v" }, "<leader>s", ":Gitsigns stage_hunk<CR>")
 vim.keymap.set("n", "<leader>u", ":Gitsigns undo_stage_hunk<CR>")
 vim.keymap.set("n", "<leader>j", ":Gitsigns next_hunk<CR>")
