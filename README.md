@@ -15,8 +15,6 @@
 - `cmp`: Completion engine
 - `fidget`: UI for LSP diagnostics
 - `lualine`: Status line with diagnostics
-- `treesj`: Code splitting and joining
-- `aerial`: Code outline
 - `trouble`: Diagnostics and references viewer
 - `indent`: Indentation guides
 - `preview`: Function preview window
@@ -25,6 +23,7 @@
 
 - `everforest`: Green, dimmed theme
 - `catppuccin`: Cozy, purple-colored theme
+- `tokyonight`: Dark, blue-themed colorscheme
 
 ## Requirements
 
