@@ -1,10 +1,10 @@
 return {
     "folke/sidekick.nvim",
     opts = {
+        nes = {
+            enabled = false,
+        },
         cli = {
-            nes = {
-                enable = false,
-            },
             win = {
                 layout = "right",
                 split = {
