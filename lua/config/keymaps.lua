@@ -1,11 +1,12 @@
 -- overview
 --
 -- b: buffers
--- c: hunk changes
+-- c: changes (hunk preview)
 -- d: definition
 -- e: errors
 -- f: files
 -- g: grep
+-- i: diff with file
 -- j: next hunk
 -- k: previous hunk
 -- p: prettier
@@ -14,6 +15,7 @@
 -- s: stage hunk
 -- t: tree
 -- u: undo stage hunk
+-- x: close tab
 
 -- lsp
 vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition)
@@ -62,3 +64,39 @@ vim.keymap.set("n", "<leader>q", function()
         goto_preview.goto_preview_definition()
     end
 end)
+
+-- diff current buffer against a file chosen through telescope
+local function diff_with_file()
+    builtin.find_files({
+        -- modify mappings to add custom action
+        attach_mappings = function(prompt_bufnr, map)
+            local actions = require("telescope.actions")
+            local action_state = require("telescope.actions.state")
+
+            local choose_file = function()
+                -- get selected file
+                local entry = action_state.get_selected_entry()
+
+                -- close telescope
+                actions.close(prompt_bufnr)
+
+                -- remember current buffer and open a new tab with a vertical diff
+                current_buf = vim.api.nvim_get_current_buf()
+                vim.cmd("tabnew")
+                vim.api.nvim_set_current_buf(current_buf)
+                vim.cmd("vert diffsplit " .. vim.fn.fnameescape(entry.value))
+            end
+
+            -- set modified mappings
+            map("i", "<CR>", choose_file)
+            map("n", "<CR>", choose_file)
+
+            return true
+        end,
+    })
+end
+
+vim.keymap.set("n", "<leader>i", diff_with_file, { desc = "Diff current buffer with file" })
+
+-- close tab
+vim.keymap.set("n", "<leader>x", ":tabclose<CR>")
