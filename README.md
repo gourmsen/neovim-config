@@ -13,7 +13,6 @@
 - `tree`: File explorer
 - `copilot`: GitHub Copilot integration
 - `cmp`: Completion engine
-- `fidget`: UI for LSP diagnostics
 - `lualine`: Status line with diagnostics
 - `trouble`: Diagnostics and references viewer
 - `indent`: Indentation guides
