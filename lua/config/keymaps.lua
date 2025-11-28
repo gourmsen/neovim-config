@@ -9,7 +9,7 @@
 -- i: diff with file
 -- j: next hunk
 -- k: previous hunk
--- p: prettier
+-- p: format with conform
 -- q: quick preview
 -- r: references
 -- s: stage hunk
@@ -40,11 +40,12 @@ vim.keymap.set("n", "<leader>u", ":Gitsigns undo_stage_hunk<CR>")
 vim.keymap.set("n", "<leader>j", ":Gitsigns next_hunk<CR>")
 vim.keymap.set("n", "<leader>k", ":Gitsigns prev_hunk<CR>")
 
--- prettier
+-- format
 vim.keymap.set("n", "<leader>p", function()
-    local pos = vim.api.nvim_win_get_cursor(0)
-    vim.cmd("silent %!npx prettier --stdin-filepath %")
-    pcall(vim.api.nvim_win_set_cursor, 0, pos)
+  require("conform").format({
+    async = true,
+    lsp_fallback = true,
+  })
 end)
 
 -- preview
