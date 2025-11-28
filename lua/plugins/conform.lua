@@ -1,10 +1,11 @@
 return {
-  'stevearc/conform.nvim',
-  opts = {
-      formatters_by_ft = {
-          javascript = { 'prettier' },
-          typescript = { 'prettier' },
-      },
-      format_on_save = false,
-  },
+    "stevearc/conform.nvim",
+    opts = {
+        formatters_by_ft = {
+            javascript = { "prettier" },
+            typescript = { "prettier" },
+            lua = { "stylua" },
+        },
+        format_on_save = false,
+    },
 }

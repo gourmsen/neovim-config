@@ -3,13 +3,14 @@ return {
     opts = {
         ensure_installed = {
             "angularls",
-            "ts_ls"
-        }
+            "ts_ls",
+            "lua_ls",
+        },
     },
     dependencies = {
         {
             "mason-org/mason.nvim",
-            opts = {}
+            opts = {},
         },
         "neovim/nvim-lspconfig",
     },

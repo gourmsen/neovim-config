@@ -7,7 +7,7 @@
 - `telescope`: Fuzzy finder with preview
 - `lazygit`: Loader for `lazygit` within Neovim
 - `treesitter`: Advanced syntax highlighting
-- `mason`: Configurations for language servers
+- `mason`: Configurations for language servers (+ `lspconfig`)
 - `gitsigns`: Visual lines for Git changes
 - `autosession`: Manages sessions for the cwd
 - `tree`: File explorer
@@ -17,6 +17,7 @@
 - `trouble`: Diagnostics and references viewer
 - `indent`: Indentation guides
 - `preview`: Function preview window
+- `conform`: Code formatting
 
 ## Themes
 
@@ -33,3 +34,5 @@
 ## Optional
 
 - `delta`: Pager for side-by-side diffs
+- `prettier`: Code formatter
+- `stylua`: Lua code formatter
