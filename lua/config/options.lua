@@ -11,3 +11,4 @@ vim.o.smartcase = true
 vim.o.number = true
 vim.o.wrap = false
 vim.o.splitright = true
+vim.o.signcolumn = "yes:1"
