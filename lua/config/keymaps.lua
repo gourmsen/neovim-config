@@ -15,6 +15,7 @@
 -- s: stage hunk
 -- t: tree
 -- u: undo stage hunk
+-- w: workspace
 -- x: close tab
 
 -- lsp
@@ -39,6 +40,9 @@ vim.keymap.set({ "n", "v" }, "<leader>s", ":Gitsigns stage_hunk<CR>")
 vim.keymap.set("n", "<leader>u", ":Gitsigns undo_stage_hunk<CR>")
 vim.keymap.set("n", "<leader>j", ":Gitsigns next_hunk<CR>")
 vim.keymap.set("n", "<leader>k", ":Gitsigns prev_hunk<CR>")
+
+-- auto session
+vim.keymap.set("n", "<leader>w", ":AutoSession search<CR>")
 
 -- format
 vim.keymap.set("n", "<leader>p", function()

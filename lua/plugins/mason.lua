@@ -5,6 +5,7 @@ return {
             "angularls",
             "ts_ls",
             "lua_ls",
+            "markdown_oxide",
         },
     },
     dependencies = {

@@ -18,6 +18,7 @@
 - `indent`: Indentation guides
 - `preview`: Function preview window
 - `conform`: Code formatting
+- `markdown`: Enhanced markdown support
 
 ## Themes
 
