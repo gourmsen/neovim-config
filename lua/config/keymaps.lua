@@ -9,6 +9,7 @@
 -- i: diff with file
 -- j: next hunk
 -- k: previous hunk
+-- l: lazygit
 -- p: format with conform
 -- q: quick preview
 -- r: references
@@ -17,40 +18,45 @@
 -- u: undo stage hunk
 -- w: workspace
 -- x: close tab
+-- z: reset hunk
 
 -- lsp
-vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition)
-vim.keymap.set("n", "<leader>r", vim.lsp.buf.references)
+vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition, { desc = "Definition" })
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.references, { desc = "References" })
 
 -- telescope
 local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>f", builtin.find_files)
-vim.keymap.set("n", "<leader>b", builtin.buffers)
-vim.keymap.set("n", "<leader>g", builtin.live_grep)
+vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "Files" })
+vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "Buffers" })
+vim.keymap.set("n", "<leader>g", builtin.live_grep, { desc = "Grep" })
 
 -- trouble
-vim.keymap.set("n", "<leader>e", "<cmd>Trouble diagnostics toggle<cr>")
+vim.keymap.set("n", "<leader>e", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics" })
 
 -- tree
-vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>", { desc = "Tree View" })
 
 -- gitsigns
-vim.keymap.set("n", "<leader>c", ":Gitsigns preview_hunk_inline<CR>")
-vim.keymap.set({ "n", "v" }, "<leader>s", ":Gitsigns stage_hunk<CR>")
-vim.keymap.set("n", "<leader>u", ":Gitsigns undo_stage_hunk<CR>")
-vim.keymap.set("n", "<leader>j", ":Gitsigns next_hunk<CR>")
-vim.keymap.set("n", "<leader>k", ":Gitsigns prev_hunk<CR>")
+vim.keymap.set("n", "<leader>c", ":Gitsigns preview_hunk_inline<CR>", { desc = "Preview Hunk" })
+vim.keymap.set({ "n", "v" }, "<leader>s", ":Gitsigns stage_hunk<CR>", { desc = "Stage Hunk" })
+vim.keymap.set("n", "<leader>u", ":Gitsigns undo_stage_hunk<CR>", { desc = "Undo Hunk" })
+vim.keymap.set("n", "<leader>j", ":Gitsigns next_hunk<CR>", { desc = "Next Hunk" })
+vim.keymap.set("n", "<leader>k", ":Gitsigns prev_hunk<CR>", { desc = "Previous Hunk" })
+vim.keymap.set("n", "<leader>z", ":Gitsigns reset_hunk<CR>", { desc = "Reset Hunk" })
 
 -- auto session
-vim.keymap.set("n", "<leader>w", ":AutoSession search<CR>")
+vim.keymap.set("n", "<leader>w", ":AutoSession search<CR>", { desc = "Workspaces" })
+
+-- lazygit
+vim.keymap.set("n", "<leader>l", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
 
 -- format
 vim.keymap.set("n", "<leader>p", function()
-  require("conform").format({
-    async = true,
-    lsp_fallback = true,
-  })
-end)
+    require("conform").format({
+        async = true,
+        lsp_fallback = true,
+    })
+end, { desc = "Format" })
 
 -- preview
 local function has_preview()
@@ -68,7 +74,7 @@ vim.keymap.set("n", "<leader>q", function()
     else
         goto_preview.goto_preview_definition()
     end
-end)
+end, { desc = "Preview Definition" })
 
 -- diff current buffer against a file chosen through telescope
 local function diff_with_file()
@@ -86,7 +92,7 @@ local function diff_with_file()
                 actions.close(prompt_bufnr)
 
                 -- remember current buffer and open a new tab with a vertical diff
-                current_buf = vim.api.nvim_get_current_buf()
+                local current_buf = vim.api.nvim_get_current_buf()
                 vim.cmd("tabnew")
                 vim.api.nvim_set_current_buf(current_buf)
                 vim.cmd("vert diffsplit " .. vim.fn.fnameescape(entry.value))
@@ -101,7 +107,7 @@ local function diff_with_file()
     })
 end
 
-vim.keymap.set("n", "<leader>i", diff_with_file, { desc = "Diff current buffer with file" })
+vim.keymap.set("n", "<leader>i", diff_with_file, { desc = "Compare Buffer" })
 
 -- close tab
-vim.keymap.set("n", "<leader>x", ":tabclose<CR>")
+vim.keymap.set("n", "<leader>x", ":tabclose<CR>", { desc = "Close Tab" })

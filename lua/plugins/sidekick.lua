@@ -22,19 +22,19 @@ return {
         {
             "<leader>ai",
             function() require("sidekick.cli").toggle({ name = "copilot", focus = true }) end,
-            desc = "Sidekick Toggle Copilot",
+            desc = "Copilot (normal)",
         },
         {
             "<leader>at",
             function() require("sidekick.cli").send({ name = "copilot", focus = true, msg = "{this}" }) end,
             mode = { "x", "n" },
-            desc = "Send This",
+            desc = "Copilot (this)",
         },
         {
             "<leader>ad",
             function() require("sidekick.cli").send({ name = "copilot", focus = true, msg = "{diagnostics}" }) end,
             mode = { "x", "n" },
-            desc = "Send Diagnostics",
+            desc = "Copilot (diagnostics)",
         },
     },
 }

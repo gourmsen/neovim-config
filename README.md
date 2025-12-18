@@ -19,6 +19,7 @@
 - `preview`: Function preview window
 - `conform`: Code formatting
 - `markdown`: Enhanced markdown support
+- `whichkey`: Keybinding hints
 
 ## Themes
 
