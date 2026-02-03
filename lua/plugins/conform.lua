@@ -4,6 +4,10 @@ return {
         formatters_by_ft = {
             javascript = { "prettier" },
             typescript = { "prettier" },
+            html = { "prettier" },
+            scss = { "prettier" },
+            json = { "prettier" },
+            jsonc = { "prettier" },
             lua = { "stylua" },
         },
         format_on_save = false,
