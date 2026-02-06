@@ -12,7 +12,7 @@
 - `autosession`: Manages sessions for the cwd
 - `tree`: File explorer
 - `copilot`: GitHub Copilot integration
-- `cmp`: Completion engine
+- `blink`: Completion engine
 - `lualine`: Status line with diagnostics
 - `trouble`: Diagnostics and references viewer
 - `indent`: Indentation guides
@@ -23,8 +23,6 @@
 
 ## Themes
 
-- `everforest`: Green, dimmed theme
-- `catppuccin`: Cozy, purple-colored theme
 - `tokyonight`: Dark, blue-themed colorscheme
 
 ## Requirements
