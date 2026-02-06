@@ -111,3 +111,9 @@ vim.keymap.set("n", "<leader>i", diff_with_file, { desc = "Compare Buffer" })
 
 -- close tab
 vim.keymap.set("n", "<leader>x", ":tabclose<CR>", { desc = "Close Tab" })
+
+-- centered search
+vim.keymap.set("n", "n", "nzz")
+vim.keymap.set("n", "N", "Nzz")
+vim.keymap.set("n", "*", "*zz")
+vim.keymap.set("n", "#", "#zz")
