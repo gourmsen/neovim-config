@@ -20,6 +20,7 @@
 - `conform`: Code formatting
 - `markdown`: Enhanced markdown support
 - `whichkey`: Keybinding hints
+- `diffview`: Git diff viewer
 
 ## Themes
 

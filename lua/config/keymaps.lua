@@ -16,6 +16,7 @@
 -- s: stage hunk
 -- t: tree
 -- u: undo stage hunk
+-- v: diffview
 -- w: workspace
 -- x: close tab
 -- z: reset hunk
@@ -43,6 +44,9 @@ vim.keymap.set("n", "<leader>u", ":Gitsigns undo_stage_hunk<CR>", { desc = "Undo
 vim.keymap.set("n", "<leader>j", ":Gitsigns next_hunk<CR>", { desc = "Next Hunk" })
 vim.keymap.set("n", "<leader>k", ":Gitsigns prev_hunk<CR>", { desc = "Previous Hunk" })
 vim.keymap.set("n", "<leader>z", ":Gitsigns reset_hunk<CR>", { desc = "Reset Hunk" })
+
+-- diffview
+vim.keymap.set("n", "<leader>v", ":DiffviewOpen<CR>", { desc = "DiffView" })
 
 -- auto session
 vim.keymap.set("n", "<leader>w", ":AutoSession search<CR>", { desc = "Workspaces" })
