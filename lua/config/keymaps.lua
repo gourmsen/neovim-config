@@ -22,13 +22,13 @@
 
 -- lsp
 vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition, { desc = "Definition" })
-vim.keymap.set("n", "<leader>r", vim.lsp.buf.references, { desc = "References" })
 
 -- telescope
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "Files" })
 vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "Buffers" })
 vim.keymap.set("n", "<leader>g", builtin.live_grep, { desc = "Grep" })
+vim.keymap.set("n", "<leader>r", builtin.lsp_references, { desc = "References" })
 
 -- trouble
 vim.keymap.set("n", "<leader>e", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics" })
