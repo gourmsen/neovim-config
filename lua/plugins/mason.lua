@@ -6,6 +6,7 @@ return {
             "ts_ls",
             "lua_ls",
             "markdown_oxide",
+            "tailwindcss",
         },
     },
     dependencies = {

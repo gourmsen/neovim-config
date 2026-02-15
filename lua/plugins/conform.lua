@@ -5,6 +5,7 @@ return {
             javascript = { "prettier" },
             typescript = { "prettier" },
             html = { "prettier" },
+            css = { "prettier" },
             scss = { "prettier" },
             json = { "prettier" },
             jsonc = { "prettier" },
