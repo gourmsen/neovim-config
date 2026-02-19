@@ -15,6 +15,7 @@
 - `blink`: Completion engine
 - `lualine`: Status line with diagnostics
 - `trouble`: Diagnostics and references viewer
+- `inline-diagnostics`: Shows diagnostics inline
 - `indent`: Indentation guides
 - `preview`: Function preview window
 - `conform`: Code formatting
