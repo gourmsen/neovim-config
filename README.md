@@ -25,6 +25,7 @@
 ## Themes
 
 - `tokyonight`: Dark, blue-themed colorscheme
+- `rose-pine`: Soft, pastel colorscheme
 
 ## Requirements
 
