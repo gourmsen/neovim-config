@@ -46,7 +46,14 @@ vim.keymap.set("n", "<leader>k", ":Gitsigns prev_hunk<CR>", { desc = "Previous H
 vim.keymap.set("n", "<leader>z", ":Gitsigns reset_hunk<CR>", { desc = "Reset Hunk" })
 
 -- diffview
-vim.keymap.set("n", "<leader>v", ":DiffviewOpen<CR>", { desc = "DiffView" })
+vim.keymap.set("n", "<leader>v", function()
+    local input = vim.fn.input("DiffviewOpen (optional branch/commit): ")
+    if input == "" then
+        vim.cmd("DiffviewOpen")
+    else
+        vim.cmd("DiffviewOpen " .. input)
+    end
+end, { desc = "DiffView" })
 
 -- auto session
 vim.keymap.set("n", "<leader>w", ":AutoSession search<CR>", { desc = "Workspaces" })
