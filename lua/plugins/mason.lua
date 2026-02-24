@@ -7,6 +7,7 @@ return {
             "lua_ls",
             "markdown_oxide",
             "tailwindcss",
+            "rust_analyzer",
         },
     },
     dependencies = {
