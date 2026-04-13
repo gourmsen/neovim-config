@@ -9,6 +9,7 @@ return {
             left_pad = 3,
             custom = {
                 waiting = { raw = "[~]", rendered = " ", highlight = "RenderMarkdownWarn" },
+                blocked = { raw = "[!]", rendered = " ", highlight = "RenderMarkdownError" },
             },
         },
     },
