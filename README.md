@@ -2,27 +2,42 @@
 
 ## Plugins (with Lazy)
 
-- `autopairs`: Matches brackets automatically
-- `autotag`: Auto-closes tags with treesitter
+### File Management
+
 - `telescope`: Fuzzy finder with preview
-- `lazygit`: Loader for `lazygit` within Neovim
+- `tree`: File explorer
+
+### Language Support
+
 - `treesitter`: Advanced syntax highlighting
 - `mason`: Configurations for language servers (+ `lspconfig`)
-- `gitsigns`: Visual lines for Git changes
-- `autosession`: Manages sessions for the cwd
-- `tree`: File explorer
-- `copilot`: GitHub Copilot integration
 - `blink`: Completion engine
-- `lualine`: Status line with diagnostics
-- `trouble`: Diagnostics and references viewer
-- `todo`: Highlights TODO comments
-- `inline-diagnostics`: Shows diagnostics inline
-- `indent`: Indentation guides
 - `preview`: Function preview window
-- `conform`: Code formatting
 - `markdown`: Enhanced markdown support
-- `whichkey`: Keybinding hints
+- `conform`: Code formatting
+- `trouble`: Diagnostics and references viewer
+- `inline-diagnostics`: Shows diagnostics inline
+
+### Version Control
+
+- `gitsigns`: Visual lines for Git changes
+- `lazygit`: Loader for `lazygit` within Neovim
 - `diffview`: Git diff viewer
+
+### AI Tools
+
+- `copilot`: GitHub Copilot integration
+- `sidekick`: Wrapper for AI agents
+
+### Quality of Life
+
+- `autosession`: Manages sessions for the cwd
+- `lualine`: Status line with diagnostics
+- `whichkey`: Keybinding hints
+- `indent`: Indentation guides
+- `autopairs`: Matches brackets automatically
+- `autotag`: Auto-closes tags with treesitter
+- `todo`: Highlights TODO comments
 
 ## Themes
 
